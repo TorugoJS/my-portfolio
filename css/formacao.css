@@ -8,12 +8,25 @@
   padding: 40px 20px;
   margin: 0 auto;
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 2fr;
   gap: 100px;
 }
 
+.formacao-container::after {
+  content: "";
+  display: block;
+  background: url("../img/detalhe.svg") no-repeat center center;
+  width: 130px;
+  position: absolute;
+  height: 130px;
+  bottom: -50px;
+  left: 20px;
+}
+
 .formacao .subtitulo {
   color: #000;
+  max-width: 5ch;
 }
 
 .formacao-texto {
@@ -127,10 +140,17 @@
     gap: 40px;
     padding: 60px 20px;
   }
+
   .formacao .subtitulo {
     color: #fff;
   }
+
   .formacao-texto {
     font-size: 1.125rem;
+  }
+
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
   }
 }
