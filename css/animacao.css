@@ -1,0 +1,61 @@
+.container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  width: 50vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  flex: 1;
+  margin: 5px;
+  position: relative;
+  transition: flex 1s ease-in-out;
+}
+.texto-card {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opaticy 0.3s ease-in-out 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 70%;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    align-items: center;
+    margin: 0 auto;
+    width: 600px;
+  }
+}
