@@ -1,6 +1,7 @@
 .footer {
   background-color: #000;
 }
+
 .footer-container {
   max-width: 1200px;
   padding: 120px 20px 60px 20px;
@@ -35,11 +36,23 @@
   color: #8f8f8f;
 }
 
+.redes {
+  display: flex;
+  gap: 30px;
+  font-size: 3rem;
+  margin: 0 auto;
+}
+
+.redes i {
+  color: #fff;
+}
+
 @media (max-width: 800px) {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .footer-contato li {
     font-size: 1.5rem;
   }
