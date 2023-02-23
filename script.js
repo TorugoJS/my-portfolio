@@ -1,15 +1,19 @@
-const imgs = document.getElementById("img");
-const img = document.querySelectorAll("#img img");
+const textEl = document.getElementById("letras");
+const text = "Front End";
 
-let idx = 0;
+let idx = 1;
+let speed = 250;
 
-function carrossel() {
+writeText();
+
+function writeText() {
+  textEl.innerText = text.slice(0, idx);
+
   idx++;
-  if (idx > img.length - 1) {
-    idx = 0;
+
+  if (idx > text.length) {
+    idx = 1;
   }
 
-  imgs.style.transform = `translateX(${-idx * 700}px)`;
+  setTimeout(writeText, speed);
 }
-
-setInterval(carrossel, 1800);
